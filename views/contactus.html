@@ -3,30 +3,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Add Product</title>
+    <link rel="stylesheet" href="/css/contactus.css">
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <h1>Contact Us</h1>
-  <form action="/success" method="post">
-    <div>
-      <label for="firstName">First Name:</label>
-      <input type="text" id="firstName" name="firstName" required>
-    </div>
-    <div>
-      <label for="lastName">Last Name:</label>
-      <input type="text" id="lastName" name="lastName" required>
-    </div>
-    <div>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-    <div>
-      <label for="phone">Phone:</label>
-      <input type="tel" id="phone" name="phone" required>
-    </div>
-    <button type="submit">Submit</button>
-  </form>
+    <header class="main-header">
+        <nav class="main-header__nav">
+            <ul class="main-header__item-list">
+                <li class="main-header__item"><a href="/">Shop</a></li>
+                <li class="main-header__item"><a class="active" href="/contactus">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form class="contactus-form" action="/contactus" method="POST">
+            <div class="form-control">
+                <label>Name</label>
+                    <input type="text" name="name" id="name">
+            </div>
+            <div class="form-control">
+                <label>Email Id</label>
+                <input type="text" name="email" id="email">
+            </div>
+            <button type="submit">Contact Us</button>
+        </form>
+    </main>
 </body>
 </html>
